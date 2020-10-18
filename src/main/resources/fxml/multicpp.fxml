@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="2.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MultiCPPController">
+    <children>
+      <VBox VBox.vgrow="ALWAYS">
+         <children>
+              <HBox alignment="CENTER_LEFT" spacing="8.0" style="-fx-background-color: AAAAAA;" VBox.vgrow="ALWAYS">
+                  <children>
+                      <TextField fx:id="textField" prefHeight="23.0" prefWidth="174.0" text="C:/Users/Jesse/Desktop/MCPP/Experiments/mlct-mcpp_experiment_data/verify_experiment/experiment_area.png" />
+      
+                      <Button fx:id="btnOpenImage" mnemonicParsing="false" onAction="#onOpenImageAction" text="Open Image" />
+      
+                      <Button fx:id="btnBuildPyramid" mnemonicParsing="false" onAction="#onBuildPyramidAction" text="Build Pyramid" />
+                  <TextField fx:id="textFieldLayer" prefHeight="23.0" prefWidth="36.0" text="1" />
+                  <TextField fx:id="textFieldX" prefHeight="23.0" prefWidth="36.0" text="1" />
+                  <TextField fx:id="textFieldY" prefHeight="23.0" prefWidth="36.0" text="1" />
+                  <Button fx:id="btnFindNeighbors" mnemonicParsing="false" onAction="#onFindNeighborsAction" text="Find Neighbors" />
+                  </children>
+                  <opaqueInsets>
+                      <Insets left="16.0" />
+                  </opaqueInsets>
+                  <padding>
+                      <Insets left="8.0" right="8.0" />
+                  </padding>
+              </HBox>
+            <Pane minHeight="4.0" prefHeight="4.0" />
+            <HBox alignment="CENTER_LEFT" spacing="8.0" style="-fx-background-color: AAAAAA;" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="textFieldCycleNum" prefHeight="23.0" prefWidth="50.0" text="1000" />
+                  <Button fx:id="btnAssignArea" mnemonicParsing="false" onAction="#OnAssignAreaAction" text="Assign Area" />
+                  <Button mnemonicParsing="false" text="Cycle Times" />
+                  <Label fx:id="lblTotalCycleNum" alignment="CENTER" prefHeight="23.0" style="-fx-background-color: DDDDDD;" text="0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="8.0" right="8.0" />
+                     </padding></Label>
+                  <Button fx:id="btnNextCycle" mnemonicParsing="false" onAction="#onNextCycleAction" text="&gt;&gt;" />
+                  <Button fx:id="btnBuildSTree" mnemonicParsing="false" onAction="#onBuildSTreeAction" text="Build S-Tree" />
+                  <Button fx:id="btnFindPath" mnemonicParsing="false" onAction="#onFindPathAction" text="Find Path" />
+               </children>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding></HBox>
+         </children>
+      </VBox>
+        <HBox spacing="4.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TreeView fx:id="treeView" onMouseClicked="#treeViewMouseClick" />
+
+                <ImageView fx:id="imageView" fitHeight="512.0" fitWidth="512.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+</VBox>
